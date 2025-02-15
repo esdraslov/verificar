@@ -2,28 +2,33 @@
 <head>
   <title>Verificação</title>
   <style>
-    #title {
+    .title {
       font-family: Arial;
       color: #a2a2a2;
     }
     body {
       color: #ffffff;
     }
+    button.green {
+      color: green;
+      font-color: white;
+      font-family: Arial;
+    }
   </style>
 </head>
 <body>
-  <h1 id="guildname title"></h1>
-  <button id="verify green">Verificar</button>
+  <h1 class="guildname title"></h1>
+  <button class="verify green">Verificar</button>
 
   <script>
     document.addEventListener("DOMContentLoaded", () => {
       let params = new URLSearchParams(new URL(window.location.href).search)
   
-      params.forEach((value, key) => {
-        if (key == "guild") {
+      for (let [value, key] of params.entries()) {
+        if (key === "guild") {
           document.querySelector("#guildname").innerText = value
         }
-      })
+      }
     }, false)
   </script>
 </body>
