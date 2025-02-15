@@ -16,7 +16,7 @@
   <button id="verify green">Verificar</button>
 
   <script>
-    let params = new URLSearchParams(window.location.href)
+    let params = new URLSearchParams(new URL(window.location.href).search)
 
     for (let [key, value] of params.entries()) {
       if (key === "guild") {
