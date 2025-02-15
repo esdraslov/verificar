@@ -10,9 +10,10 @@
       background-color: #ffffff;
     }
     button.green {
-      color: green;
-      font-color: white;
+      background: green;
+      color: white;
       font-family: Arial;
+      border: 0px;
     }
   </style>
 </head>
@@ -26,7 +27,7 @@
   
       for (let [value, key] of params.entries()) {
         if (key === "guild") {
-          document.querySelector("#guildname").innerText = value
+          document.querySelector(".guildname").innerText = value
         }
       }
     }, false)
