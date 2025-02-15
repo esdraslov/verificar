@@ -19,11 +19,11 @@
     document.addEventListener("DOMContentLoaded", () => {
       let params = new URLSearchParams(new URL(window.location.href).search)
   
-      for (let [value, key] of params.entries()) {
-        if (key === "guild") {
+      params.forEach((value, key) => {
+        if (key == "guild") {
           document.querySelector("#guildname").innerText = value
         }
-      }
+      })
     }, false)
   </script>
 </body>
