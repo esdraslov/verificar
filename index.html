@@ -1,0 +1,19 @@
+<html>
+<head>
+  <title>Verificação</title>
+</head>
+<body>
+  <h1 id="guildname title"></h1>
+  <button id="verify green">Verificar</button>
+
+  <script>
+    let param = new URLSearchParams(window.location.href)
+
+    for (let [key, value] of params.entries()) {
+      if (key === "guild") {
+        document.querySelector("#guildname").innerText(value)
+      }
+    }
+  </script>
+</body>
+</html>
